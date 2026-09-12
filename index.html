@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>    
+    <meta charset="UTF-8">    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>My Project</title></head>
+<body>
+    <div class="page">
+        <img id="pageImage" src="./page1.jpg" alt="Page 1">
+        <!-- دکمه -->        
+         <button class="next-btn" onclick="nextPage()"> NEXT </button>
+    </div>
+
+    <script>        
+    let currentPage = 1;
+        const totalPages = 5;
+        function nextPage() {
+            if (currentPage < totalPages) {
+                currentPage++;
+                document.getElementById("pageImage").src ="./page" + currentPage + ".jpg";
+            }
+        }    
+        </script>
+</body>
+</html>
